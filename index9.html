@@ -1,0 +1,34 @@
+<HTML>
+<head>
+    <title>json</title>
+    </head>
+<body>
+    
+    <div id="output1"></div>
+
+    <script>
+   
+        var output1= document.getElementById("output1");
+        
+        const url="https://randomuser.me/api/?result=10";
+       
+//fetch(url).then(function(rep){
+           // return rep.json() } ).then(function(data){
+            //console.log(data.results[0]);
+            //let person=data.results[0].name;
+            //output1.innerHTML=person.first+" "+person.last;
+       // })
+            
+        //another way to fetch +catch error 
+        
+        
+        fetch(url).then(r => {return r.json()})
+        .then(data => {console.log(data);})
+        .catch(error => {console.log(error);})
+        
+                                      
+    
+    </script>
+    </body>
+
+</HTML>

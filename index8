@@ -1,0 +1,49 @@
+<HTML>
+<head>
+    <title>json</title>
+    </head>
+<body>
+    
+    <div id="output1"></div>
+    <div id="output2"></div>
+
+    <script>
+    var obj= {
+        "people":[{
+            "firstName":"John",
+            "lastName":"Smith",
+            "age":25
+                  },
+                    {
+            "firstName":"abs",
+            "lastName":"ats",
+            "age":20
+             }          
+        ],
+    "places":[
+        {
+            "location":"Sydney",
+        },
+        {
+            "location":"melbourne"
+        }        
+      ]
+    
+    }
+console.log(obj);       
+    var output1= document.getElementById("output1");
+    var output2= document.getElementById("output2");
+         
+        var obj1={//we create temp obj then we push it 
+            "firstName":"sss",
+            "lastName":"sss",
+            "age":22   
+        }
+        var objStr= JSON.stringify(obj1);
+        
+                                         
+    
+    </script>
+    </body>
+
+</HTML>

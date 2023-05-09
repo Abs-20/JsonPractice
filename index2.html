@@ -1,0 +1,29 @@
+<HTML>
+<head>
+    <title>json</title>
+    </head>
+<body>
+    
+    <div id="output1"></div>
+    <div id="output2"></div>
+
+    <script>
+    var myObj= {
+  "firstName":"John",
+  "lastName":"Smith",
+  "age":25,
+    }
+    console.log(myObj);
+        
+    var output1= document.getElementById("output1");
+    var output2= document.getElementById("output2");
+                                         
+    output1.innerHTML=myObj.firstName;
+    output2.innerHTML=myObj.lastName;
+
+                                         
+    
+    </script>
+    </body>
+
+</HTML>

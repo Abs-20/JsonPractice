@@ -1,0 +1,38 @@
+<HTML>
+<head>
+    <title>json</title>
+    </head>
+<body>
+    
+    <div id="output1"></div>
+    <div id="output2"></div>
+
+    <script>
+    var obj= {
+        "people":[{
+            "firstName":"John",
+            "lastName":"Smith",
+            "age":25
+                  },
+                    {
+            "firstName":"abs",
+            "lastName":"ats",
+            "age":20
+             }          
+                 
+                 
+                 
+                 ]}
+console.log(obj);       
+    var output1= document.getElementById("output1");
+    var output2= document.getElementById("output2");
+                                         
+    output1.innerHTML=obj.people[1].firstName +" "+ obj.people[1].lastName;
+    output2.innerHTML=obj.people[0].firstName +" "+ obj.people[0].lastName;
+
+                                         
+    
+    </script>
+    </body>
+
+</HTML>

@@ -1,0 +1,57 @@
+Json : JavaScript Object Notation
+
+- start and end with {}
+- name and value seperated by :
+- seperate more than one pair by  , 
+-ex: {"name":"value"  , "name2":"value2"}  for arrays {   "name" :[{"name":"value"  , "name2":"value2"}]   }
+- tools for json:
+1- myjson.com  -> storage of json
+2- jsonlint.com -> validate and sort json objects
+3- randomuser.me -> json data api            randomuser.me/api/?result=10
+4- jsonschema.net -> help in made json objects , have a template ready to use 
+5- jsoneditoronline.org    -> write json codes
+
+- data types : 
+ Number {"name":10}
+ String {"name":"abs"}
+ boolean {"name":true}
+ Array  {"name":[ {"name1":1} ,"hello","world",1 ] }
+ object {"name": {"name1": 1, "name2":2 }  }
+ null {"name":null}
+
+- different between json and javaScript:
+1- no nee to put "" in the key for javascript
+2- json can't invoke functions
+
+exercise :index2 ->(extract data from the json obj to html page) open that file inside chrome and open consol from dev tools
+steps:
+1-create html file 
+2- declare var myObj and put some data 
+3- console.log(myObj);
+4- var output1= document.getElementById("output1"); ->then we type output inside the console
+5- output1.innerHTML=myObj.firstName;   -> to extract data from the json obj to html page.
+
+ex:index3: deal with array 
+- we need to make sure of the clean structure for the data
+
+ex:indix4: people exercise:
+
+ex5: indix 5  : for loop
+
+ex6: add contenet to the object
+- we use push ex: obj.people.push({"key":"value"})
+- a good tip is to create new object and save the key/values there then push it //obj.people.push(temp);
+
+ex7:Json built in methods:
+1- JSON. stringify() -> Json value to JSON String 
+2- JSON.parse() -> JSON String to Json obj
+
+ex8: use locla storage 
+2 methods most commonly used : localStorage.setItem('ID',obj), getItem('ID')
+
+ex9: fetch :
+1- we need location for the json objects 
+2- we need to use fetch methode
+
+ex10: for each 
+

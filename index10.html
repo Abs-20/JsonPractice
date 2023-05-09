@@ -1,0 +1,33 @@
+<HTML>
+<head>
+    <title>json</title>
+    </head>
+<body>
+    
+    <div id="output1"></div>
+
+    <script>
+   
+        var output1= document.getElementById("output1");
+        
+        const url="https://randomuser.me/api/?result=10";
+       
+fetch(url).then(function(res){ return res.json()})
+          .then(function(data)
+                {data.results.forEach(function(person)
+                   {
+                        console.log(person.name.first);
+                        console.log(person.picture.thumbnail);
+                        output1.innerHTML += person.name.first +" ";
+                        output1.innerHTML +="<img src='"+person.picture.thumbnail+"'><br>";    
+                   })
+           console.log(data);
+        })
+            
+        
+                                      
+    
+    </script>
+    </body>
+
+</HTML>

@@ -1,0 +1,23 @@
+{
+  "firstName":"John",
+  "lastName":"Smith",
+  "age":25,
+  "address":{
+    "Sstreet":"21 ave",
+    "city": "NewYork",
+    "state":"NY"
+  },
+  "phoneNumber": [
+      {"type":"home",
+       "number":123456}
+       ,
+      {"type":"fax",
+      "number":11111}
+    
+  ]
+
+
+
+
+  
+}

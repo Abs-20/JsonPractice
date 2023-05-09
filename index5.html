@@ -1,0 +1,55 @@
+<HTML>
+<head>
+    <title>json</title>
+    </head>
+<body>
+    
+    <div id="output1"></div>
+    <div id="output2"></div>
+
+    <script>
+    var obj= {
+        "people":[{
+            "firstName":"John",
+            "lastName":"Smith",
+            "age":25
+                  },
+                    {
+            "firstName":"abs",
+            "lastName":"ats",
+            "age":20
+             }          
+        ],
+    "places":[
+        {
+            "location":"Sydney",
+        },
+        {
+            "location":"melbourne"
+        }        
+      ]
+    
+    }
+console.log(obj);       
+    var output1= document.getElementById("output1");
+    var output2= document.getElementById("output2");
+            for(var i=0; i<obj.people.length;i++){
+                var person =obj.people[i];
+               console.log(person) ;
+                output1.innerHTML += person.firstName +" "+person.lastName +"<br>";
+                
+            }                             
+            for(var i=0; i<obj.places.length;i++){
+                var place =obj.places[i];
+               console.log(place) ;
+                output2.innerHTML += place.location+"<br>";
+                
+            }                             
+  
+
+                                         
+    
+    </script>
+    </body>
+
+</HTML>
