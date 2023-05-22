@@ -1,0 +1,66 @@
+ retrive the data from json file usinhg JsonPath with two ways:
+ 1- dot notathion:   $.store.book[0].title
+ 2- brackets notation : $['store']['book'][0]['title']  -> don't forget ''
+
+$: represent root object and its optional
+
+jsonpath.com : to test the path retrive  
+
+examples: 
+
+$.store.*  : will return all the objects inside the store 
+
+$.store.object.property    -> retrive specific property
+
+$.store..property    -> fitch all the prices inside the json object
+
+$.store.book[*]   -> will return the whole object from the array for everybook
+
+$.store.book[*].property   -> will print this property for every book  
+
+$.store.book[0,2]             > first and third element inside the array (multiple elements
+
+$.store.book[0:2]   -> range of elements  
+
+$.store.book[0:]    -> from 0 to the last 
+
+$.store.book[-2]   -> last two elements
+
+$..book[?(@.property)]   -> to add filter we need ? and @.property   all the book that have this property
+
+$..book[?(!@.property)]   ->  all the book that doesnot have this property
+
+$..book[?(@.price > 10)]   -> all the books greater than 10
+
+
+jsonpathfinder.com   help to creat json path
+jsonpathfinder    extension for chrom 
+
+
+
+
+#read from  Json file #
+
+1- add dependency example Json-simple inside pom.xml
+2- creat the Json file 
+3- creeat java class
+4- inside the java class:     1- create Jsop parser -> JSONParser jsonParser = new JSONParser();
+					2- create file reader -> FileReader reader = new FileReader("file location");
+					3- creat object to save the data into that object as json object -> Object obj= jsonParser.parse(reader);
+					4- convert the object to Json object -> JSONObject jObject=(JSONObject)obj;
+					5- convert the Json to String using get and cascade -> String fName=jObject.get("firstName");
+5- if we have array inside it multiple Json objects we do the following:
+    					1- save the array into JsonArray -> JSONArray array=(JSONArray)jObject.get("array key (address)");
+					2- we need for loop to walk through all the elements and extract them :
+						for(int i=0;i<array.size();i++{
+										        JSONObject address=(JSONObject) array.get(i); 
+											 // because we have more than Json elements in the array 
+											  String street=(String) address.get("the property");
+											}
+
+
+
+#testing #
+1- add the dependencies : selenume , webDrivermanager
+2- add testNG library to the project 
+
